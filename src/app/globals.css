@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-dim: #d1d5d7;
+  --color-surface-container-highest: #dadddf;
+  --color-primary-fixed: #c484ff;
+  --color-on-primary-container: #370060;
+  --color-on-error-container: #510017;
+  --color-secondary-dim: #75318e;
+  --color-inverse-primary: #b86cfd;
+  --color-on-secondary: #ffedff;
+  --color-inverse-surface: #0c0f10;
+  --color-on-surface-variant: #595c5d;
+  --color-on-secondary-container: #6b2885;
+  --color-surface: #f5f6f7;
+  --color-secondary-fixed-dim: #ecadff;
+  --color-on-error: #ffefef;
+  --color-secondary-container: #f2c1ff;
+  --color-tertiary-container: #ff909b;
+  --color-surface-container: #e6e8ea;
+  --color-primary: #7f30c3;
+  --color-on-primary-fixed-variant: #440075;
+  --color-outline-variant: #abadae;
+  --color-on-background: #2c2f30;
+  --color-on-surface: #2c2f30;
+  --color-error-container: #f74b6d;
+  --color-surface-container-lowest: #ffffff;
+  --color-secondary-fixed: #f2c1ff;
+  --color-tertiary-dim: #902a3b;
+  --color-on-primary: #fbefff;
+  --color-on-tertiary-container: #65071e;
+  --color-tertiary: #a03646;
+  --color-on-tertiary: #ffefef;
+  --color-primary-fixed-dim: #ba70ff;
+  --color-primary-container: #c484ff;
+  --color-inverse-on-surface: #9b9d9e;
+  --color-tertiary-fixed-dim: #fb7c8a;
+  --color-surface-variant: #dadddf;
+  --color-surface-container-high: #e0e3e4;
+  --color-secondary: #823e9b;
+  --color-on-tertiary-fixed: #39000c;
+  --color-tertiary-fixed: #ff909b;
+  --color-on-secondary-fixed-variant: #76328f;
+  --color-on-primary-fixed: #000000;
+  --color-primary-dim: #721fb6;
+  --color-error: #b41340;
+  --color-surface-bright: #f5f6f7;
+  --color-on-tertiary-fixed-variant: #711226;
+  --color-surface-tint: #7f30c3;
+  --color-surface-container-low: #eff1f2;
+  --color-outline: #757778;
+  --color-error-dim: #a70138;
+  --color-on-secondary-fixed: #560e70;
+  --color-background: #f5f6f7;
+
+  --font-headline: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+  }
+  .purple-mist {
+    box-shadow: 0 12px 32px -4px rgba(127, 48, 195, 0.08);
+  }
+  .hero-gradient {
+    background: radial-gradient(circle at 50% 50%, rgba(127, 48, 195, 0.05) 0%, transparent 70%);
+  }
+  .tap-scale:active {
+    transform: scale(0.96);
+    transition: transform 0.1s ease-out;
+  }
+}
